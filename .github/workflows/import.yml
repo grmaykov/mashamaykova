@@ -1,0 +1,28 @@
+name: Import reviewed portfolio
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/import.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: import-portfolio
+  cancel-in-progress: false
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Transfer and verify reviewed site
+        run: python .migration/import.py
+      - name: Save complete portfolio
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- index.html app.js style.css data.js assets
+          if ! git diff --cached --quiet; then
+            git commit -m "Import complete reviewed Masha Maykova portfolio"
+            git push origin HEAD:main
+          fi
