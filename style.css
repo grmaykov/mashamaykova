@@ -54,3 +54,32 @@ header .signature{font-weight:700}header nav a,header .menu-toggle,header .langu
 @media(min-width:761px) and (max-width:1100px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:32px;row-gap:45px}}
 @media(max-width:760px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:38px 24px}.artwork button{height:auto}.artwork figcaption{min-height:58px;font-size:12px}}
 @media(max-width:560px){.gallery{grid-template-columns:1fr;row-gap:36px}.artwork button{height:auto;aspect-ratio:4/5}.artwork figcaption{min-height:0;margin-top:15px;font-size:14px}.caption-title .year,.artwork .meta{font-size:12px}}
+
+/* About: a compact editorial layout with one shared text/video column. */
+body[data-page="about"] #main{max-width:1120px;margin:0 auto;padding:60px 64px 110px}
+body[data-page="about"] .bio-layout{grid-template-columns:minmax(0,30fr) minmax(0,62fr);gap:8%;margin-top:0;align-items:start}
+body[data-page="about"] .bio-art{position:static;padding-top:7px}
+body[data-page="about"] .bio-art img{display:block;width:100%;height:auto;max-height:none}
+body[data-page="about"] .bio-text{max-width:none}
+body[data-page="about"] .bio-text .lead{font-size:25px;line-height:1.5;margin:0 0 24px}
+body[data-page="about"] .bio-text p:not(.lead){font-size:14px;line-height:1.85;margin:0}
+body[data-page="about"] .film-section{width:62%;max-width:none;margin:40px 0 0 38%;padding:0;border:0}
+body[data-page="about"] .film-heading{margin-bottom:13px}
+body[data-page="about"] .film-heading h2{font-size:20px;line-height:1.3;letter-spacing:-.3px}
+body[data-page="about"] .essay-section{margin-top:100px;padding-top:0;border-top:0}
+body[data-page="about"] .essay{grid-template-columns:minmax(0,30fr) minmax(0,62fr);gap:8%}
+body[data-page="about"] .essay-text{max-width:none}
+@media(max-width:900px) and (min-width:761px){
+body[data-page="about"] #main{padding-left:6%;padding-right:6%}
+body[data-page="about"] .bio-text .lead{font-size:23px}
+}
+@media(max-width:760px){
+body[data-page="about"] #main{padding:40px 7% 70px}
+body[data-page="about"] .page-heading{margin-bottom:32px}
+body[data-page="about"] .bio-layout{grid-template-columns:1fr;gap:30px}
+body[data-page="about"] .bio-art{width:60%;max-width:270px;padding:0}
+body[data-page="about"] .bio-text .lead{font-size:24px}
+body[data-page="about"] .film-section{width:100%;margin:35px 0 0}
+body[data-page="about"] .essay-section{margin-top:65px;padding-top:0}
+body[data-page="about"] .essay{grid-template-columns:1fr;gap:20px}
+}
