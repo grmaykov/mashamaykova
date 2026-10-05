@@ -112,3 +112,10 @@ body[data-page="about"] .about-exhibitions>h2::before{inset-inline:-6vw;backgrou
 .artwork svg.cropped-artwork{position:absolute;inset:0;display:block;width:100%;height:100%;max-width:100%;max-height:100%;transition:opacity .25s ease}
 .artwork button:hover svg.cropped-artwork{opacity:.86}
 #image-stage.zoomed svg.cropped-artwork{max-width:none;max-height:none;min-width:100%;height:auto;display:block;margin:auto}
+
+/* A thumb-friendly return to the main navigation. */
+#return-menu{position:fixed;right:max(24px,env(safe-area-inset-right));bottom:calc(24px + env(safe-area-inset-bottom));z-index:20;display:flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:12px 19px;border:1px solid rgba(40,40,37,.2);border-radius:30px;background:rgba(247,246,242,.97);box-shadow:0 3px 16px rgba(40,40,37,.12);font-size:13px;line-height:1.2;color:var(--ink)}
+#return-menu[hidden]{display:none}
+#return-menu .return-arrow{font-size:21px;line-height:1}
+#return-menu:hover{background:#fff}
+@media(max-width:760px){#return-menu{right:16px;right:max(16px,env(safe-area-inset-right));bottom:calc(16px + env(safe-area-inset-bottom));min-height:48px;padding:12px 17px}}
