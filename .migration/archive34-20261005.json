@@ -1,0 +1,888 @@
+{
+  "added": [
+    {
+      "id": "0756",
+      "audit_id": "A0039",
+      "source_audit_id": "A0039",
+      "public_url": "https://disk.yandex.ru/d/-04t5hU6ygNq-Q",
+      "path": "/флешка1/disk 1/102.JPG",
+      "original_md5": "b3e609baba720c74c6eefaf35af001a4",
+      "original_sha256": "be8989a210d78c9d8e11bccfd53849687a0c342e1ea0931eb6f717c61745b66f",
+      "rotate_ccw": 0,
+      "crop_before_rotation": [
+        0,
+        0.014,
+        1,
+        1
+      ],
+      "encoded_size": [
+        2200,
+        2010
+      ],
+      "display_crop": [
+        0,
+        0.014,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "0757",
+      "audit_id": "A0088",
+      "source_audit_id": "A0088",
+      "public_url": "https://disk.yandex.ru/d/-04t5hU6ygNq-Q",
+      "path": "/флешка1/disk 5/98940006.JPG",
+      "original_md5": "8f6f9189bcbd0178590f569aba7457cd",
+      "original_sha256": "11d3084e2b7ad80c5c734fc81e03055337a198a79c1ee587f71bd81e29ebec86",
+      "rotate_ccw": 0,
+      "crop_before_rotation": [
+        0.094,
+        0.037,
+        0.929,
+        0.974
+      ],
+      "encoded_size": [
+        2200,
+        1774
+      ],
+      "display_crop": [
+        0.094,
+        0.037,
+        0.929,
+        0.974
+      ]
+    },
+    {
+      "id": "0758",
+      "audit_id": "A0100",
+      "source_audit_id": "A0520",
+      "public_url": "https://disk.yandex.ru/d/-04t5hU6ygNq-Q",
+      "path": "/флешка1/папка 1/98940019.JPG",
+      "original_md5": "9705cbf20ccafb4a2101db60c5f3fb5e",
+      "original_sha256": "d59e8f1184be7bb40afe681c94e3d7410338000f16b2b63052ada7c812cf9bec",
+      "rotate_ccw": 0,
+      "crop_before_rotation": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "encoded_size": [
+        2184,
+        1063
+      ],
+      "display_crop": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "0759",
+      "audit_id": "A0101",
+      "source_audit_id": "A0101",
+      "public_url": "https://disk.yandex.ru/d/-04t5hU6ygNq-Q",
+      "path": "/флешка1/disk 5/98940020.JPG",
+      "original_md5": "4730d6e9fd4785f74445e0799a561e48",
+      "original_sha256": "d4d9d5e2619d2e1ac1e25eeb517ff8666733abdee97331c27dfb0deb5c786a9f",
+      "rotate_ccw": 0,
+      "crop_before_rotation": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "encoded_size": [
+        1774,
+        2200
+      ],
+      "display_crop": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "0760",
+      "audit_id": "A0171",
+      "source_audit_id": "A0171",
+      "public_url": "https://disk.yandex.ru/d/-04t5hU6ygNq-Q",
+      "path": "/флешка1/Книга/27.JPG",
+      "original_md5": "c24f859281d140eb6ea3b432bbacb632",
+      "original_sha256": "50e0ec362b4456abb11aa4313a1deff09f56097236e6711e937e81b22395860a",
+      "rotate_ccw": 0,
+      "crop_before_rotation": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "encoded_size": [
+        1739,
+        2200
+      ],
+      "display_crop": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "0761",
+      "audit_id": "A0177",
+      "source_audit_id": "A0177",
+      "public_url": "https://disk.yandex.ru/d/-04t5hU6ygNq-Q",
+      "path": "/флешка1/Книга/30.JPG",
+      "original_md5": "e8d78f79aa8e6eabedcc5103e777ca7b",
+      "original_sha256": "70b636920010e8cf01493069f669dc28f32d75f603d041fcd4e48cb607a0b496",
+      "rotate_ccw": 0,
+      "crop_before_rotation": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "encoded_size": [
+        1703,
+        2200
+      ],
+      "display_crop": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "0762",
+      "audit_id": "A0250",
+      "source_audit_id": "A0250",
+      "public_url": "https://disk.yandex.ru/d/-04t5hU6ygNq-Q",
+      "path": "/флешка1/Книга/IMG_0681.JPG",
+      "original_md5": "18b845c6a96fe874db5a2e6112a44ec5",
+      "original_sha256": "dbf22408121a024b27542443977690b12aaf31c6c03d5240fa0b4f59ade48c08",
+      "rotate_ccw": 0,
+      "crop_before_rotation": [
+        0.021,
+        0,
+        0.979,
+        1
+      ],
+      "encoded_size": [
+        2200,
+        1467
+      ],
+      "display_crop": [
+        0.021,
+        0,
+        0.979,
+        1
+      ]
+    },
+    {
+      "id": "0763",
+      "audit_id": "A0251",
+      "source_audit_id": "A0251",
+      "public_url": "https://disk.yandex.ru/d/-04t5hU6ygNq-Q",
+      "path": "/флешка1/Книга/IMG_0684.JPG",
+      "original_md5": "f99d402be92fb6d65a6c634a46caa339",
+      "original_sha256": "7dc44d838e0094fbb696398824a6fb2f501a6bde0148d901877db04c05fbcc7c",
+      "rotate_ccw": 0,
+      "crop_before_rotation": [
+        0.022,
+        0,
+        0.977,
+        1
+      ],
+      "encoded_size": [
+        2200,
+        1467
+      ],
+      "display_crop": [
+        0.022,
+        0,
+        0.977,
+        1
+      ]
+    },
+    {
+      "id": "0764",
+      "audit_id": "A0254",
+      "source_audit_id": "A0254",
+      "public_url": "https://disk.yandex.ru/d/-04t5hU6ygNq-Q",
+      "path": "/флешка1/Книга/IMG_0693.JPG",
+      "original_md5": "5f4cf293b16d2ffb6fcab963e2e7ca94",
+      "original_sha256": "1101d3762ae88bd34fef25fd4786e5829959c738be36aff17e23ff80035f1d62",
+      "rotate_ccw": 0,
+      "crop_before_rotation": [
+        0.026,
+        0,
+        0.93,
+        1
+      ],
+      "encoded_size": [
+        2200,
+        1467
+      ],
+      "display_crop": [
+        0.026,
+        0,
+        0.93,
+        1
+      ]
+    },
+    {
+      "id": "0765",
+      "audit_id": "A0259",
+      "source_audit_id": "A0259",
+      "public_url": "https://disk.yandex.ru/d/-04t5hU6ygNq-Q",
+      "path": "/флешка1/Книга/IMG_0734.JPG",
+      "original_md5": "4b6d2c4a7d3eba9060d217ed9b50705e",
+      "original_sha256": "cab89fb85811a86623978d5dddbc444b49cbd4f06f6c44dd6be29fc081c8fc7b",
+      "rotate_ccw": 0,
+      "crop_before_rotation": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "encoded_size": [
+        2200,
+        1467
+      ],
+      "display_crop": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "0766",
+      "audit_id": "A0303",
+      "source_audit_id": "A0303",
+      "public_url": "https://disk.yandex.ru/d/-04t5hU6ygNq-Q",
+      "path": "/флешка1/Книга-1/17.JPG",
+      "original_md5": "028140d4bb7776183ddf8494acdbe804",
+      "original_sha256": "a1a8f7360387c628d2c8c716a48dc6620403e27b0ff86c7c7c7a213d9715ae63",
+      "rotate_ccw": 0,
+      "crop_before_rotation": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "encoded_size": [
+        2200,
+        1704
+      ],
+      "display_crop": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "0767",
+      "audit_id": "A0410",
+      "source_audit_id": "A0410",
+      "public_url": "https://disk.yandex.ru/d/-04t5hU6ygNq-Q",
+      "path": "/флешка1/Книга-1/IMG_0716.JPG",
+      "original_md5": "65d97ea1859ff0e33343c8a016dcd6f7",
+      "original_sha256": "efc12169c2d7a3673eaaba2238810c8d6dc62e6d0aebe043549b587a15cca905",
+      "rotate_ccw": 0,
+      "crop_before_rotation": [
+        0.014,
+        0.097,
+        0.978,
+        0.896
+      ],
+      "encoded_size": [
+        1467,
+        2200
+      ],
+      "display_crop": [
+        0.014,
+        0.097,
+        0.978,
+        0.896
+      ]
+    },
+    {
+      "id": "0768",
+      "audit_id": "A0412",
+      "source_audit_id": "A0412",
+      "public_url": "https://disk.yandex.ru/d/-04t5hU6ygNq-Q",
+      "path": "/флешка1/Книга-1/IMG_0740.JPG",
+      "original_md5": "92b0cb514d55095c570f9c45aa1adf8a",
+      "original_sha256": "c4ab8370854a898b7f4b04cd470295a8d51d7bd92a0498a19c4520ee2ce1cc97",
+      "rotate_ccw": 0,
+      "crop_before_rotation": [
+        0,
+        0,
+        1,
+        0.99
+      ],
+      "encoded_size": [
+        2200,
+        1467
+      ],
+      "display_crop": [
+        0,
+        0,
+        1,
+        0.99
+      ]
+    },
+    {
+      "id": "0769",
+      "audit_id": "A0442",
+      "source_audit_id": "A0442",
+      "public_url": "https://disk.yandex.ru/d/-04t5hU6ygNq-Q",
+      "path": "/флешка1/Книга-1/PICT0028.JPG",
+      "original_md5": "b535d0c79312f7830e87503a6e6ed7da",
+      "original_sha256": "23e2654654e6c0e5aa3b24657fcf6606ce7a3667a19e45c6d69860c046a2af0c",
+      "rotate_ccw": 0,
+      "crop_before_rotation": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "encoded_size": [
+        944,
+        1936
+      ],
+      "display_crop": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "0770",
+      "audit_id": "A0444",
+      "source_audit_id": "A0444",
+      "public_url": "https://disk.yandex.ru/d/-04t5hU6ygNq-Q",
+      "path": "/флешка1/Книга-1/PICT0031.JPG",
+      "original_md5": "39ea903600d4350a01ef1c342c709181",
+      "original_sha256": "5a23162ee50bbe97e630ad00fbd109d1323d4fa80c465676c6276a943efe54c1",
+      "rotate_ccw": 0,
+      "crop_before_rotation": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "encoded_size": [
+        976,
+        1900
+      ],
+      "display_crop": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "0771",
+      "audit_id": "A0464",
+      "source_audit_id": "A0464",
+      "public_url": "https://disk.yandex.ru/d/-04t5hU6ygNq-Q",
+      "path": "/флешка1/Книга-1/Копия DSC_9528-1.jpg",
+      "original_md5": "7f1a91b748a518bad185d2b546f0d90b",
+      "original_sha256": "85a0cd5536208b6a6d8437846fbf791aeb37b304b467587f7592ff0966c35a03",
+      "rotate_ccw": 0,
+      "crop_before_rotation": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "encoded_size": [
+        1022,
+        2200
+      ],
+      "display_crop": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "0772",
+      "audit_id": "A0472",
+      "source_audit_id": "A0472",
+      "public_url": "https://disk.yandex.ru/d/-04t5hU6ygNq-Q",
+      "path": "/флешка1/Книга-1/Копия DSC_9537-1.jpg",
+      "original_md5": "c7373508f6cdcd057b6827355ee6458e",
+      "original_sha256": "6fbe97a8ef0164fdb038c1504582cad08eff961e0a8c0551603e669d27e4eed7",
+      "rotate_ccw": 0,
+      "crop_before_rotation": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "encoded_size": [
+        1157,
+        2200
+      ],
+      "display_crop": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "0773",
+      "audit_id": "A0481",
+      "source_audit_id": "A0481",
+      "public_url": "https://disk.yandex.ru/d/-04t5hU6ygNq-Q",
+      "path": "/флешка1/Книга-1/Копия DSC_9548-1.jpg",
+      "original_md5": "cbe1f3f90a2cf27a941b8a6078fbdc50",
+      "original_sha256": "1572b925951247406bc00b09245de259353b8602b6b6182ddb6c6c56165b22b7",
+      "rotate_ccw": 0,
+      "crop_before_rotation": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "encoded_size": [
+        1693,
+        2200
+      ],
+      "display_crop": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "0774",
+      "audit_id": "A0494",
+      "source_audit_id": "A0494",
+      "public_url": "https://disk.yandex.ru/d/-04t5hU6ygNq-Q",
+      "path": "/флешка1/Книга-1/Копия DSC_9573-1.jpg",
+      "original_md5": "f800cb9fd52f9ebc7ed53a02ed423b54",
+      "original_sha256": "ffeb576351ad2273b6fceeb568377f3a500e75a26bf5f6c8d0f2861e38d801d9",
+      "rotate_ccw": 0,
+      "crop_before_rotation": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "encoded_size": [
+        1679,
+        2200
+      ],
+      "display_crop": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "0775",
+      "audit_id": "A0500",
+      "source_audit_id": "A0500",
+      "public_url": "https://disk.yandex.ru/d/-04t5hU6ygNq-Q",
+      "path": "/флешка1/Книга-1/Копия DSC_9583-1.jpg",
+      "original_md5": "315defa42c5e0137cc4dbb219248c71d",
+      "original_sha256": "cbb36e936673f8df28c1c9506beb2e446bd678a31897d358b7555220cac1b6a0",
+      "rotate_ccw": 0,
+      "crop_before_rotation": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "encoded_size": [
+        1686,
+        2200
+      ],
+      "display_crop": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "0776",
+      "audit_id": "A0515",
+      "source_audit_id": "A0515",
+      "public_url": "https://disk.yandex.ru/d/-04t5hU6ygNq-Q",
+      "path": "/флешка1/Маша Майкова Ред/PICT0007.JPG",
+      "original_md5": "2710132628c442d814f1f44ec81a02f2",
+      "original_sha256": "6a73496c00b0ea3dfd8e90136e7fb6081e220ba23bb9b0ac96610572fb432a59",
+      "rotate_ccw": 0,
+      "crop_before_rotation": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "encoded_size": [
+        1653,
+        2200
+      ],
+      "display_crop": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "0777",
+      "audit_id": "A0544",
+      "source_audit_id": "A0544",
+      "public_url": "https://disk.yandex.ru/d/-04t5hU6ygNq-Q",
+      "path": "/флешка2/Майкова М.C./15.jpg",
+      "original_md5": "7b6f0a519ceeec6073417009bd386073",
+      "original_sha256": "8427a0dab214ec768275ae51b27ddb89542e82a56baefaf406a4459dc7efb3b2",
+      "rotate_ccw": 0,
+      "crop_before_rotation": [
+        0,
+        0,
+        1,
+        0.982
+      ],
+      "encoded_size": [
+        2200,
+        1801
+      ],
+      "display_crop": [
+        0,
+        0,
+        1,
+        0.982
+      ]
+    },
+    {
+      "id": "0778",
+      "audit_id": "A0545",
+      "source_audit_id": "A0545",
+      "public_url": "https://disk.yandex.ru/d/-04t5hU6ygNq-Q",
+      "path": "/флешка2/Майкова М.C./16 gr.jpg",
+      "original_md5": "7c6228c1c403fb35a286dc60a2f51ca7",
+      "original_sha256": "3241464c02847b945dd18d618f593324dc5d1d36609fa24a8b908aba03065f60",
+      "rotate_ccw": 0,
+      "crop_before_rotation": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "encoded_size": [
+        1638,
+        2200
+      ],
+      "display_crop": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "0779",
+      "audit_id": "A0552",
+      "source_audit_id": "A0552",
+      "public_url": "https://disk.yandex.ru/d/-04t5hU6ygNq-Q",
+      "path": "/флешка2/Майкова М.C./22.jpg",
+      "original_md5": "c0f819818910bdbae9989064218255e1",
+      "original_sha256": "d5d7f2d1d00c20f43ab032e4608f49ca0ef5ce68d558632ce5472540cad1c431",
+      "rotate_ccw": 0,
+      "crop_before_rotation": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "encoded_size": [
+        2200,
+        1576
+      ],
+      "display_crop": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "0780",
+      "audit_id": "A0557",
+      "source_audit_id": "A0557",
+      "public_url": "https://disk.yandex.ru/d/-04t5hU6ygNq-Q",
+      "path": "/флешка2/Майкова М.C./28.jpg",
+      "original_md5": "d4a5e38a910a8f513a01d8c6961df664",
+      "original_sha256": "42578ce6dd3edf6d12f9ab239d100641e9290ffaf0b9faf0063a11926130649c",
+      "rotate_ccw": 0,
+      "crop_before_rotation": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "encoded_size": [
+        1559,
+        2200
+      ],
+      "display_crop": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "0781",
+      "audit_id": "A0561",
+      "source_audit_id": "A0561",
+      "public_url": "https://disk.yandex.ru/d/-04t5hU6ygNq-Q",
+      "path": "/флешка2/Майкова М.C./32.jpg",
+      "original_md5": "96bcbf4ac183f483b930d9fd34b8e3f6",
+      "original_sha256": "bf703567da68d72108767558390c9cf0028b34911881c7f60bffd6ff6c87d98c",
+      "rotate_ccw": 0,
+      "crop_before_rotation": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "encoded_size": [
+        2200,
+        1837
+      ],
+      "display_crop": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "0782",
+      "audit_id": "A0594",
+      "source_audit_id": "A0594",
+      "public_url": "https://disk.yandex.ru/d/-04t5hU6ygNq-Q",
+      "path": "/флешка2/работы 3/IMG_7223.JPG",
+      "original_md5": "2a46e46c83fa29ea1f05b4368b2f0843",
+      "original_sha256": "f6341e9a221eaa34e21542f0a3385f32da867552bb052b96bbe96c32d3b1ac02",
+      "rotate_ccw": 0,
+      "crop_before_rotation": [
+        0.022,
+        0.079,
+        0.979,
+        0.881
+      ],
+      "encoded_size": [
+        1467,
+        2200
+      ],
+      "display_crop": [
+        0.022,
+        0.079,
+        0.979,
+        0.881
+      ]
+    },
+    {
+      "id": "0783",
+      "audit_id": "A0595",
+      "source_audit_id": "A0595",
+      "public_url": "https://disk.yandex.ru/d/-04t5hU6ygNq-Q",
+      "path": "/флешка2/работы 3/IMG_7224.JPG",
+      "original_md5": "2c575f36d36a929b80362dda3565db00",
+      "original_sha256": "dffc13897eec285e99f600ec79b776da5b48ed519c66f474040b92d902e20767",
+      "rotate_ccw": 0,
+      "crop_before_rotation": [
+        0.063,
+        0.02,
+        0.931,
+        0.973
+      ],
+      "encoded_size": [
+        2200,
+        1467
+      ],
+      "display_crop": [
+        0.063,
+        0.02,
+        0.931,
+        0.973
+      ]
+    },
+    {
+      "id": "0784",
+      "audit_id": "A0597",
+      "source_audit_id": "A0597",
+      "public_url": "https://disk.yandex.ru/d/-04t5hU6ygNq-Q",
+      "path": "/флешка2/работы 3/IMG_7238.JPG",
+      "original_md5": "1ad051bda729ecb54249da2694d76942",
+      "original_sha256": "2a4d839ae352f0a5c967f28141d7f79164cf5ccbfff75efd74957a1cefdcb855",
+      "rotate_ccw": 90,
+      "crop_before_rotation": [
+        0.094,
+        0.025,
+        0.942,
+        1
+      ],
+      "encoded_size": [
+        1467,
+        2200
+      ],
+      "display_crop": [
+        0.025,
+        0.058,
+        1,
+        0.906
+      ]
+    },
+    {
+      "id": "0785",
+      "audit_id": "A0598",
+      "source_audit_id": "A0598",
+      "public_url": "https://disk.yandex.ru/d/-04t5hU6ygNq-Q",
+      "path": "/флешка2/работы 3/IMG_7240.JPG",
+      "original_md5": "638f86a45458efad7ad4f231114a0ff6",
+      "original_sha256": "01d93c343572aa0c789ad16b10d6224c336737a00f2153533ae61d2f2e6aa260",
+      "rotate_ccw": 90,
+      "crop_before_rotation": [
+        0.077,
+        0.059,
+        0.871,
+        0.984
+      ],
+      "encoded_size": [
+        1467,
+        2200
+      ],
+      "display_crop": [
+        0.059,
+        0.129,
+        0.984,
+        0.923
+      ]
+    },
+    {
+      "id": "0786",
+      "audit_id": "A0599",
+      "source_audit_id": "A0599",
+      "public_url": "https://disk.yandex.ru/d/-04t5hU6ygNq-Q",
+      "path": "/флешка2/работы 3/IMG_7241.JPG",
+      "original_md5": "66ceb45c24ed620f0ce52bd077d76b57",
+      "original_sha256": "1730de962357d03fcaf7e931796c269672906a7c53f9ce79ac8ffcfc4a507c80",
+      "rotate_ccw": 90,
+      "crop_before_rotation": [
+        0.021,
+        0.102,
+        0.997,
+        0.927
+      ],
+      "encoded_size": [
+        1467,
+        2200
+      ],
+      "display_crop": [
+        0.102,
+        0.003,
+        0.927,
+        0.979
+      ]
+    },
+    {
+      "id": "0787",
+      "audit_id": "A0600",
+      "source_audit_id": "A0600",
+      "public_url": "https://disk.yandex.ru/d/-04t5hU6ygNq-Q",
+      "path": "/флешка2/работы 3/IMG_7242.JPG",
+      "original_md5": "ae85712b24f311395a38cd1dacf93212",
+      "original_sha256": "bc5e53e8d57d63bce390f32360ba5a2c0f491fd083b27f58d0175f27001fd13e",
+      "rotate_ccw": 90,
+      "crop_before_rotation": [
+        0.066,
+        0.023,
+        0.888,
+        0.989
+      ],
+      "encoded_size": [
+        1467,
+        2200
+      ],
+      "display_crop": [
+        0.023,
+        0.112,
+        0.989,
+        0.934
+      ]
+    },
+    {
+      "id": "0788",
+      "audit_id": "A0608",
+      "source_audit_id": "A0608",
+      "public_url": "https://disk.yandex.ru/d/-04t5hU6ygNq-Q",
+      "path": "/флешка2/работы 3/IMG_7251.JPG",
+      "original_md5": "887338eddc49af71f6369579647b95b2",
+      "original_sha256": "640042257a520f89a678c61ccfd59360babe44e1bdb621cfeda11724fbf453ef",
+      "rotate_ccw": 90,
+      "crop_before_rotation": [
+        0.085,
+        0.017,
+        0.923,
+        0.97
+      ],
+      "encoded_size": [
+        1467,
+        2200
+      ],
+      "display_crop": [
+        0.017,
+        0.077,
+        0.97,
+        0.915
+      ]
+    },
+    {
+      "id": "0789",
+      "audit_id": "A0609",
+      "source_audit_id": "A0609",
+      "public_url": "https://disk.yandex.ru/d/-04t5hU6ygNq-Q",
+      "path": "/флешка2/работы 3/IMG_7252.JPG",
+      "original_md5": "ddfc150d96174629a96c259adb34d560",
+      "original_sha256": "265d6032738ce426ec559f0ae76109bc4137509da51551522e5815ff1204f545",
+      "rotate_ccw": 270,
+      "crop_before_rotation": [
+        0.067,
+        0.024,
+        0.916,
+        1
+      ],
+      "encoded_size": [
+        1467,
+        2200
+      ],
+      "display_crop": [
+        0,
+        0.067,
+        0.976,
+        0.916
+      ]
+    }
+  ]
+}
