@@ -119,3 +119,6 @@ body[data-page="about"] .about-exhibitions>h2::before{inset-inline:-6vw;backgrou
 #return-menu .return-arrow{font-size:21px;line-height:1}
 #return-menu:hover{background:#fff}
 @media(max-width:760px){#return-menu{right:16px;right:max(16px,env(safe-area-inset-right));bottom:calc(16px + env(safe-area-inset-bottom));min-height:48px;padding:12px 17px}}
+
+/* 0358: neutral white paper; retain original source and every brush mark. */
+img[src="assets/0358.webp"],img[src="assets/0358-thumb.webp"]{filter:grayscale(1) brightness(1.6)}
