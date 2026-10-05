@@ -1,5 +1,40 @@
 'use strict';
 const tr={en:{name:'Masha Maykova',nav:['Paintings','Graphic Art','About','Contact'],artist:'Masha Maykova · Artist',note:'Select a work to view in detail',more:'Show more works',rights:'All rights reserved',back:'Back to works ↑',solo:'Solo exhibitions',group:'Group exhibitions',essays:'Writing on the work',archive:'From the artist’s archive',untitled:'Title not recorded',zoom:'Zoom in',out:'Fit to screen',menu:'Menu',close:'Close',education:'Education & membership',contact:'For exhibition, collection and collaboration enquiries.',pending:'Contact details will be added shortly.',bioLead:'Masha Maykova is an artist based in Moscow. Her paintings and graphic works bring together everyday life, interiors, landscapes and the intimate world of human relationships.',bio:'Born in Yaroslavl in 1952, she studied at the Abramtsevo School of Industrial Art from 1968 to 1972 and at the Art Faculty of the Moscow Technological Institute from 1973 to 1977. She joined the Union of Artists of the USSR in 1983. Her work has been shown in Russia and internationally, and is held in private collections in Russia, Europe, the United States and Canada.',study:['1968–1972 · Abramtsevo School of Industrial Art','1973–1977 · Moscow Technological Institute, Art Faculty','1983 · Joined the Union of Artists of the USSR']},ru:{name:'Маша Майкова',nav:['Живопись','Графика','Об авторе','Контакты'],artist:'Маша Майкова · Художник',note:'Нажмите на работу, чтобы рассмотреть её крупнее',more:'Показать ещё',rights:'Все права защищены',back:'К работам ↑',solo:'Персональные выставки',group:'Групповые выставки',essays:'О творчестве',archive:'Из архива художницы',untitled:'Название не указано',zoom:'Увеличить',out:'Вписать в экран',menu:'Меню',close:'Закрыть',education:'Образование и членство',contact:'По вопросам выставок, приобретения работ и сотрудничества.',pending:'Контактные данные скоро появятся.',bioLead:'Маша Майкова — художник, живёт и работает в Москве. В её живописи и графике встречаются повседневная жизнь, интерьеры, пейзажи и близкий мир человеческих отношений.',bio:'Родилась в Ярославле в 1952 году. В 1968–1972 годах училась в Абрамцевском художественно-промышленном училище, в 1973–1977 годах — на художественном факультете Московского технологического института. С 1983 года — член Союза художников СССР. Участвовала в российских и международных выставках. Её работы находятся в частных собраниях России, Европы, США и Канады.',study:['1968–1972 · Абрамцевское художественно-промышленное училище','1973–1977 · Московский технологический институт, художественный факультет','1983 · Вступление в Союз художников СССР']}};
+
+/* Keep the current artwork visible until the next route's background is decoded. */
+const PAGE_BACKGROUNDS={
+ paintings:{src:'assets/0669.webp',position:'58% 43%'},
+ 'graphic-art':{src:'assets/0650.webp',position:'52% 46%'},
+ about:{src:'assets/0667.webp',position:'54% 40%'},
+ contact:{src:'assets/0657.webp',position:'62% 48%'}
+};
+const backgroundLoads=new Map();
+let backgroundRequest=0;
+function loadPageBackground(page){
+ if(backgroundLoads.has(page))return backgroundLoads.get(page);
+ const image=new Image();
+ image.decoding='async';
+ const pending=new Promise((resolve,reject)=>{
+  image.onload=async()=>{
+   try{await image.decode()}catch(error){}
+   resolve(image);
+  };
+  image.onerror=()=>{backgroundLoads.delete(page);reject(new Error('Background image unavailable'))};
+  image.src=PAGE_BACKGROUNDS[page].src;
+ });
+ backgroundLoads.set(page,pending);
+ return pending;
+}
+function updatePageBackground(page){
+ const request=++backgroundRequest;
+ loadPageBackground(page).then(()=>{
+  if(request!==backgroundRequest)return;
+  const background=PAGE_BACKGROUNDS[page];
+  document.body.style.setProperty('--page-art','url("'+background.src+'")');
+  document.body.style.setProperty('--art-position',background.position);
+ }).catch(()=>{ /* A failed download must leave the current background visible. */ });
+}
+
 const routes=['paintings','graphic-art','about','contact'];
 let lang=new URLSearchParams(location.search).get('lang')==='ru'?'ru':'en',route='paintings',shown=30,exhibitionType='solo',activeWorks=[],activeIndex=0,lastFocus=null;
 const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -34,7 +69,7 @@ function exhibitions(){
  return `<div class="exhibition-columns">${columns.map(column=>`<div class="exhibition-column">${column.map(g=>`<section class="exhibition-year-group"><div>${g.events.map(e=>`<article class="exhibition-entry"><p class="exhibition-kind"><span class="entry-year">${e.year}</span><span>${lang==='ru'?(e.type==='solo'?'Персональная':'Групповая'):(e.type==='solo'?'Solo':'Group')}</span></p><h4 class="exhibition-title">${esc(e.title[lang])}</h4><p class="exhibition-location">${esc(e.location[lang])}</p></article>`).join('')}</div></section>`).join('')}</div>`).join('')}</div>`
 }
 function contact(){let w=ARTWORKS.find(w=>w.id===CONTACT_ART)||ARTWORKS[0];return `<div class="contact-layout"><img src="${artworkImage(w)}" alt="${esc(titleOf(w))}"><div class="contact-copy"><h2>${tr[lang].name}</h2><p>${tr[lang].contact}</p><a class="contact-phone" href="tel:+79653140496">+7 965 314 04 96</a><div class="social-links"><a href="https://t.me/+79653140496" target="_blank" rel="noopener" aria-label="Telegram" title="Telegram"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.6 3.5 18.3 20c-.25 1.17-.9 1.45-1.84.9l-5.05-3.73-2.44 2.35c-.27.27-.5.5-1.02.5l.36-5.13L17.65 6c.4-.36-.09-.56-.61-.2L5.5 13.08.53 11.52c-1.08-.34-1.1-1.08.22-1.6L20.16 2.4c.9-.34 1.7.21 1.44 1.1Z"/></svg></a><a href="https://wa.me/79653140496" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 11.6a8.8 8.8 0 0 1-13 7.8L3 20.8l1.4-4.4A8.8 8.8 0 1 1 20.6 11.6Z"/><path d="m8 7.2 1.6-.1 1.1 2.6-1.1 1c.8 1.7 1.9 2.8 3.6 3.5l1-1.2 2.7 1.2v1.6c-1.9 2.5-7.9-.3-9.6-4.9-.5-1.4-.4-2.7.7-3.7Z"/></svg></a><a href="https://www.facebook.com/profile.php?id=100006250209629" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14 22v-9h3l.5-3H14V8c0-.9.3-1.5 1.6-1.5H18V3.2c-.4-.1-1.8-.2-3.3-.2C11.5 3 10 4.9 10 8v2H7v3h3v9Z"/></svg></a><a href="https://www.instagram.com/mashamaykova/" target="_blank" rel="noopener" aria-label="Instagram — @mashamaykova" title="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a><a href="mailto:mashamaykova@gmail.com" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="m3 6 9 7 9-7"/></svg></a></div></div></div>`}
-function render(reset=true){updateMenuReturn();let hash=location.hash.slice(1);if(hash==='exhibitions'){hash='about';history.replaceState(null,'',location.pathname+location.search+'#about')}route=routes.includes(hash)?hash:'paintings';document.body.dataset.page=route;if(reset)shown=30;const i=routes.indexOf(route);document.documentElement.lang=lang;document.title=`${tr[lang].name} — ${tr[lang].nav[i]}`;$('nav').innerHTML=routes.map((r,j)=>`<a href="#${r}" ${r===route?'aria-current="page"':''}>${tr[lang].nav[j]}</a>`).join('');$('.signature').textContent=tr[lang].name;$('.footer-name').textContent=tr[lang].name;$('#copyright').textContent=`© ${new Date().getFullYear()} ${tr[lang].name}. ${tr[lang].rights}.`;$('#back-top').textContent=tr[lang].back;$('.menu-toggle').textContent=tr[lang].menu;document.querySelectorAll('[data-lang]').forEach(b=>{b.classList.toggle('active',b.dataset.lang===lang);b.setAttribute('aria-pressed',b.dataset.lang===lang)});$('#main').innerHTML=heading(i)+(i<2?gallery():i===2?about():contact());$('#close').setAttribute('aria-label',tr[lang].close);$('#prev').setAttribute('aria-label',lang==='ru'?'Предыдущая работа':'Previous artwork');$('#next').setAttribute('aria-label',lang==='ru'?'Следующая работа':'Next artwork')}
+function render(reset=true){updateMenuReturn();let hash=location.hash.slice(1);if(hash==='exhibitions'){hash='about';history.replaceState(null,'',location.pathname+location.search+'#about')}route=routes.includes(hash)?hash:'paintings';document.body.dataset.page=route;updatePageBackground(route);if(reset)shown=30;const i=routes.indexOf(route);document.documentElement.lang=lang;document.title=`${tr[lang].name} — ${tr[lang].nav[i]}`;$('nav').innerHTML=routes.map((r,j)=>`<a href="#${r}" ${r===route?'aria-current="page"':''}>${tr[lang].nav[j]}</a>`).join('');$('.signature').textContent=tr[lang].name;$('.footer-name').textContent=tr[lang].name;$('#copyright').textContent=`© ${new Date().getFullYear()} ${tr[lang].name}. ${tr[lang].rights}.`;$('#back-top').textContent=tr[lang].back;$('.menu-toggle').textContent=tr[lang].menu;document.querySelectorAll('[data-lang]').forEach(b=>{b.classList.toggle('active',b.dataset.lang===lang);b.setAttribute('aria-pressed',b.dataset.lang===lang)});$('#main').innerHTML=heading(i)+(i<2?gallery():i===2?about():contact());$('#close').setAttribute('aria-label',tr[lang].close);$('#prev').setAttribute('aria-label',lang==='ru'?'Предыдущая работа':'Previous artwork');$('#next').setAttribute('aria-label',lang==='ru'?'Следующая работа':'Next artwork')}
 function showImage(){const w=activeWorks[activeIndex];$('#image-stage').classList.remove('zoomed');$('#zoom').textContent='+';$('#zoom').setAttribute('aria-label',tr[lang].zoom);$('#image-stage').innerHTML=artworkMarkup(w);$('#viewer-count').textContent=`${activeIndex+1} / ${activeWorks.length}`;$('#viewer-caption').innerHTML=`<div>${esc(titleOf(w))}${w.year?`, ${w.year}`:''}</div><div class="caption-meta">${esc(metadata(w))}</div>`}
 function openWork(index){activeIndex=index;lastFocus=document.activeElement;showImage();$('#lightbox').showModal();document.body.style.overflow='hidden';$('#close').focus()}
 function step(d){activeIndex=(activeIndex+d+activeWorks.length)%activeWorks.length;showImage()}
@@ -70,3 +105,7 @@ document.getElementById('return-menu').addEventListener('click',()=>{
  updateMenuReturn();
 });
 updateMenuReturn();
+
+/* Warm the remaining route backgrounds without blocking page rendering. */
+const warmBackgrounds=()=>Object.keys(PAGE_BACKGROUNDS).forEach(page=>loadPageBackground(page).catch(()=>{}));
+if('requestIdleCallback' in window)window.requestIdleCallback(warmBackgrounds,{timeout:1200});else window.setTimeout(warmBackgrounds,0);

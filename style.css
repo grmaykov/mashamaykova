@@ -20,7 +20,7 @@ header,footer{background:transparent}
 
 .exhibition-year-group{display:block}.exhibition-kind{display:flex;align-items:baseline;gap:16px}.entry-year{font:normal 16px/1.4 Georgia,serif;color:var(--ink)}
 
-body[data-page="graphic-art"]{--page-art:url("assets/0650.webp");--art-position:52% 46%}body[data-page="about"]{--page-art:url("assets/0667.webp");--art-position:54% 40%}body[data-page="contact"]{--page-art:url("assets/0657.webp");--art-position:62% 48%}
+/* Route backgrounds are swapped by app.js only after the image is decoded. */
 :root{--muted:#62635d}
 
 .exhibition-columns{grid-template-columns:repeat(3,minmax(0,1fr));gap:38px}.exhibition-entry .exhibition-title{font-size:21px}@media(max-width:1100px){.exhibition-columns{grid-template-columns:1fr;gap:0}}
