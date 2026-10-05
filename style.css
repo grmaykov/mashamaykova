@@ -77,3 +77,12 @@ body[data-page="about"] .bio-text .lead{font-size:25px}
 body[data-page="about"] .film-section{margin-top:28px}
 body[data-page="about"] .essay-section{margin-top:50px}
 }
+
+/* Align the artwork and film image bottoms on desktop. */
+@media(min-width:761px){
+body[data-page="about"] .bio-layout{align-items:stretch}
+body[data-page="about"] .bio-art{position:relative;display:flex;flex-direction:column;justify-content:flex-end}
+body[data-page="about"] .bio-art figcaption{position:absolute;top:100%;left:0;margin-top:15px}
+body[data-page="about"] .bio-text{display:flex;flex-direction:column}
+body[data-page="about"] .film-section{margin-top:auto;padding-top:28px}
+}
