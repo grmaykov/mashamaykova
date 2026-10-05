@@ -1,47 +1,29 @@
-name: Import reviewed portfolio
+name: Inspect published portfolio
 on:
   push:
     branches: [migration/complete-portfolio]
-    paths: ['.github/workflows/import.yml', '.migration/archive-parts.json']
-  workflow_dispatch:
+    paths: ['.github/workflows/import.yml']
 permissions:
-  contents: write
-concurrency:
-  group: import-portfolio
-  cancel-in-progress: false
+  contents: read
+  pages: read
 jobs:
-  import:
+  inspect:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
-      - name: Transfer and verify reviewed site
+      - name: Read Pages configuration
         env:
           GH_TOKEN: ${{ github.token }}
-        run: python .migration/import.py
-      - name: Check JavaScript syntax
+        run: gh api repos/grmaykov/mashamaykova/pages
+      - name: Check published files and HTTPS
         run: |
-          node --check app.js
-          node --check data.js
-      - name: Save complete portfolio
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- index.html app.js style.css data.js assets
-          if ! git diff --cached --quiet; then
-            git commit -m "Import complete reviewed Masha Maykova portfolio"
-            git push origin HEAD:migration/complete-portfolio
-          fi
-      - name: Inspect public domain
-        continue-on-error: true
-        run: |
-          python - <<'PYTHON'
-          import json, socket, urllib.request
-          for host in ['mashamaykova.com', 'www.mashamaykova.com']:
+          python - <<'PY'
+          import hashlib, json, urllib.request
+          expected = {'index.html':'81b35426f5c907acc3bb4b74c9f90d870303eb73', 'app.js':'e7a5d6c7886bd82ac8936b890181faefa3370884', 'data.js':'a1abe66d749a45b513034d31bd410c96dd112056', 'style.css':'4ffc58c0acf079fc6ab1d8cb9e17ff039632b22b'}
+          for scheme, host, path in [('http', 'mashamaykova.com', p) for p in expected]+[('https','mashamaykova.com','index.html'),('https','www.mashamaykova.com','index.html')]:
+              url = scheme+'://'+host+'/'+path
               try:
-                  print(json.dumps({'host': host, 'addresses': socket.gethostbyname_ex(host)[2]}), flush=True)
-                  with urllib.request.urlopen('https://' + host, timeout=20) as response:
-                      print(json.dumps({'url': response.url, 'status': response.status, 'server': response.headers.get('server')}), flush=True)
-              except Exception as error:
-                  print(json.dumps({'host': host, 'error': str(error)}), flush=True)
-          PYTHON
+                  with urllib.request.urlopen(url, timeout=30) as response:
+                      data=response.read(); sha=hashlib.sha1(b'blob '+str(len(data)).encode()+b'\0'+data).hexdigest()
+                      print(json.dumps({'url':url,'status':response.status,'matches':sha==expected[path],'final_url':response.url}),flush=True)
+              except Exception as error: print(json.dumps({'url':url,'error':str(error)}),flush=True)
+          PY
