@@ -1,8 +1,8 @@
 name: Import reviewed portfolio
 on:
   push:
-    branches: [main]
-    paths: ['.github/workflows/import.yml']
+    branches: [migration/complete-portfolio]
+    paths: ['.github/workflows/import.yml', '.migration/archive-parts.json']
   workflow_dispatch:
 permissions:
   contents: write
@@ -16,7 +16,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Transfer and verify reviewed site
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: python .migration/import.py
+      - name: Check JavaScript syntax
+        run: |
+          node --check app.js
+          node --check data.js
       - name: Save complete portfolio
         run: |
           git config user.name "github-actions[bot]"
@@ -24,5 +30,18 @@ jobs:
           git add -- index.html app.js style.css data.js assets
           if ! git diff --cached --quiet; then
             git commit -m "Import complete reviewed Masha Maykova portfolio"
-            git push origin HEAD:main
+            git push origin HEAD:migration/complete-portfolio
           fi
+      - name: Inspect public domain
+        continue-on-error: true
+        run: |
+          python - <<'PYTHON'
+          import json, socket, urllib.request
+          for host in ['mashamaykova.com', 'www.mashamaykova.com']:
+              try:
+                  print(json.dumps({'host': host, 'addresses': socket.gethostbyname_ex(host)[2]}), flush=True)
+                  with urllib.request.urlopen('https://' + host, timeout=20) as response:
+                      print(json.dumps({'url': response.url, 'status': response.status, 'server': response.headers.get('server')}), flush=True)
+              except Exception as error:
+                  print(json.dumps({'host': host, 'error': str(error)}), flush=True)
+          PYTHON
