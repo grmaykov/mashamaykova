@@ -122,3 +122,33 @@ body[data-page="about"] .about-exhibitions>h2::before{inset-inline:-6vw;backgrou
 
 /* 0358: neutral white paper; retain original source and every brush mark. */
 img[src="assets/0358.webp"],img[src="assets/0358-thumb.webp"]{filter:grayscale(1) brightness(1.6)}
+
+/* Individual exposure corrections for reviewed graphic works only; retain colored washes. */
+[data-artwork="0338"]{filter:brightness(1.2)}
+[data-artwork="0348"]{filter:brightness(1.28)}
+[data-artwork="0376"]{filter:brightness(1.55)}
+[data-artwork="0377"]{filter:brightness(1.36)}
+[data-artwork="0378"]{filter:brightness(1.52)}
+[data-artwork="0429"]{filter:brightness(1.3)}
+[data-artwork="0430"]{filter:brightness(1.3)}
+[data-artwork="0431"]{filter:brightness(1.41)}
+[data-artwork="0432"]{filter:brightness(1.42)}
+[data-artwork="0433"]{filter:brightness(1.47)}
+[data-artwork="0434"]{filter:brightness(1.4)}
+[data-artwork="0435"]{filter:brightness(1.2)}
+[data-artwork="0439"]{filter:brightness(1.16)}
+[data-artwork="0440"]{filter:brightness(1.2)}
+[data-artwork="0441"]{filter:brightness(1.18)}
+[data-artwork="0442"]{filter:brightness(1.2)}
+[data-artwork="0443"]{filter:brightness(1.24)}
+[data-artwork="0444"]{filter:brightness(1.28)}
+[data-artwork="0446"]{filter:brightness(1.17)}
+[data-artwork="0448"]{filter:brightness(1.4)}
+[data-artwork="0449"]{filter:brightness(1.3)}
+[data-artwork="0450"]{filter:brightness(1.16)}
+[data-artwork="0487"]{filter:brightness(1.43)}
+[data-artwork="0488"]{filter:brightness(1.25)}
+[data-artwork="0705"]{filter:brightness(1.1)}
+[data-artwork="0708"]{filter:brightness(1.06)}
+[data-artwork="0710"]{filter:brightness(1.06)}
+[data-artwork="0711"]{filter:brightness(1.1)}
