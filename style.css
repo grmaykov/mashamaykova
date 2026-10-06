@@ -156,3 +156,7 @@ img[src="assets/0358.webp"],img[src="assets/0358-thumb.webp"]{filter:grayscale(1
 /* Keep the About artwork rectangular with the same reviewed crop as its gallery image. */
 body[data-page="about"] .bio-art svg.cropped-artwork{display:block;width:100%;height:auto;max-height:740px}
 @media(max-width:760px){body[data-page="about"] .bio-art svg.cropped-artwork{max-height:560px}}
+
+
+/* Native links retain the language controls’ existing appearance. */
+.languages a{padding:7px 0}.languages a.active{color:var(--ink);font-weight:bold}.artwork[hidden]{display:none}
