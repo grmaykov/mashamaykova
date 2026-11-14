@@ -98,16 +98,6 @@ body[data-page="about"] .essay-text{column-count:1}
 body[data-page="about"] .essay h3{margin-bottom:22px}
 }
 
-/* Echo the navigation's stronger artwork behind the exhibitions heading. */
-body[data-page="about"] .about-exhibitions{border-top:0;padding-top:0;margin-top:75px}
-body[data-page="about"] .about-exhibitions>h2{position:relative;isolation:isolate;margin:0 0 38px;padding:28px 0}
-body[data-page="about"] .about-exhibitions>h2::before{content:"";position:absolute;z-index:-1;inset:0 calc(-4.8vw);background-image:linear-gradient(rgba(247,246,242,.55),rgba(247,246,242,.55)),var(--page-art);background-size:cover,180vw auto;background-position:center,var(--art-position);background-attachment:fixed;border-top:1px solid rgba(40,40,37,.3);border-bottom:1px solid rgba(40,40,37,.3)}
-@media(max-width:760px){
-body[data-page="about"] .about-exhibitions{margin-top:55px}
-body[data-page="about"] .about-exhibitions>h2{padding:24px 0;margin-bottom:26px}
-body[data-page="about"] .about-exhibitions>h2::before{inset-inline:-6vw;background-size:cover,auto 160vh;background-attachment:scroll}
-}
-
 /* Reversible display crops retain the original photographs. */
 .artwork svg.cropped-artwork{position:absolute;inset:0;display:block;width:100%;height:100%;max-width:100%;max-height:100%;transition:opacity .25s ease}
 .artwork button:hover svg.cropped-artwork{opacity:.86}
@@ -160,3 +150,13 @@ body[data-page="about"] .bio-art svg.cropped-artwork{display:block;width:100%;he
 
 /* Native links retain the language controls’ existing appearance. */
 .languages a{padding:7px 0}.languages a.active{color:var(--ink);font-weight:bold}.artwork[hidden]{display:none}
+
+/* Dedicated exhibition history with a softly blurred artwork background. */
+body[data-page="exhibitions"]{--page-art:url("assets/0667.webp");--art-position:54% 40%}
+body[data-page="exhibitions"]::before{inset:-24px;filter:blur(16px);background-image:linear-gradient(rgba(247,246,242,.76),rgba(247,246,242,.84)),var(--page-art)}
+body[data-page="exhibitions"] .exhibition-columns{gap:clamp(28px,4vw,64px)}
+body[data-page="exhibitions"] .exhibition-year-group{border-top-color:rgba(40,40,37,.24)}
+body[data-page="exhibitions"] .exhibition-title{font:normal 23px/1.35 Georgia,'Times New Roman',serif;letter-spacing:-.3px}
+body[data-page="exhibitions"] .exhibition-location{font-size:13px;line-height:1.6;margin:0}
+@media(min-width:761px) and (max-width:1100px){header{gap:20px;padding-inline:4%}nav{gap:17px}.signature{font-size:25px}body[data-page="exhibitions"] .exhibition-columns{grid-template-columns:repeat(3,minmax(0,1fr));gap:25px}}
+@media(max-width:760px){body[data-page="exhibitions"] .exhibition-columns{gap:0}body[data-page="exhibitions"] .exhibition-title{font-size:22px}}
