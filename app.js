@@ -5,7 +5,7 @@ const tr={en:{name:'Masha Maykova',nav:['Paintings','Graphic Art','About','Exhib
 const PAGE_BACKGROUNDS={
  paintings:{src:'assets/0669.webp',position:'58% 43%'},
  'graphic-art':{src:'assets/0650.webp',position:'52% 46%'},
- exhibitions:{src:'assets/0667.webp',position:'54% 40%'},
+ exhibitions:{src:'assets/0647.webp',position:'50% 45%'},
  about:{src:'assets/0667.webp',position:'54% 40%'},
  contact:{src:'assets/0657.webp',position:'62% 48%'}
 };

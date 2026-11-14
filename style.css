@@ -151,9 +151,8 @@ body[data-page="about"] .bio-art svg.cropped-artwork{display:block;width:100%;he
 /* Native links retain the language controls’ existing appearance. */
 .languages a{padding:7px 0}.languages a.active{color:var(--ink);font-weight:bold}.artwork[hidden]{display:none}
 
-/* Dedicated exhibition history with a softly blurred artwork background. */
-body[data-page="exhibitions"]{--page-art:url("assets/0667.webp");--art-position:54% 40%}
-body[data-page="exhibitions"]::before{inset:-24px;filter:blur(16px);background-image:linear-gradient(rgba(247,246,242,.76),rgba(247,246,242,.84)),var(--page-art)}
+/* Dedicated exhibition history with its own gallery painting. */
+body[data-page="exhibitions"]{--page-art:url("assets/0647.webp");--art-position:50% 45%}
 body[data-page="exhibitions"] .exhibition-columns{gap:clamp(28px,4vw,64px)}
 body[data-page="exhibitions"] .exhibition-year-group{border-top-color:rgba(40,40,37,.24)}
 body[data-page="exhibitions"] .exhibition-title{font:normal 23px/1.35 Georgia,'Times New Roman',serif;letter-spacing:-.3px}

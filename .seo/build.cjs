@@ -8,7 +8,7 @@ const routes=['paintings','graphic-art','about','exhibitions','contact'];
 const base='https://mashamaykova.com';
 let template=read('.seo/template.html').replace('<head>','<head><base href="/">')
  .replace(/<button data-lang="(en|ru)" aria-label="([^"]+)">(EN|RU)<\/button>/g,'<a data-lang="$1" aria-label="$2">$3</a>')
- .replace(/style.css\?v=[^"]+/g,'style.css?v=exhibitions-1').replace(/data.js\?v=[^"]+/g,'data.js?v=seo-1').replace(/app.js\?v=[^"]+/g,'app.js?v=exhibitions-1');
+ .replace(/style.css\?v=[^"]+/g,'style.css?v=exhibitions-2').replace(/data.js\?v=[^"]+/g,'data.js?v=seo-1').replace(/app.js\?v=[^"]+/g,'app.js?v=exhibitions-2');
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const urls=[];
 for(const language of ['en','ru'])for(const route of routes){
