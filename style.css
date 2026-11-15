@@ -159,3 +159,8 @@ body[data-page="exhibitions"] .exhibition-title{font:normal 23px/1.35 Georgia,'T
 body[data-page="exhibitions"] .exhibition-location{font-size:13px;line-height:1.6;margin:0}
 @media(min-width:761px) and (max-width:1100px){header{gap:20px;padding-inline:4%}nav{gap:17px}.signature{font-size:25px}body[data-page="exhibitions"] .exhibition-columns{grid-template-columns:repeat(3,minmax(0,1fr));gap:25px}}
 @media(max-width:760px){body[data-page="exhibitions"] .exhibition-columns{gap:0}body[data-page="exhibitions"] .exhibition-title{font-size:22px}}
+
+/* Separate solo and group exhibition histories. */
+.exhibition-category + .exhibition-category{margin-top:64px}
+.exhibition-category-title{font:normal clamp(28px,3vw,40px)/1.2 Georgia,serif;letter-spacing:-.6px;margin:0 0 28px}
+@media(max-width:760px){.exhibition-category + .exhibition-category{margin-top:44px}.exhibition-category-title{font-size:28px;margin-bottom:20px}}
